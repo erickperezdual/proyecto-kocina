@@ -1,0 +1,335 @@
+/* Estilos para el Header */
+
+/* Custom variables */
+:root {
+  --white: #ffffff;
+  --black: #000000;
+  --gray: #4a4a4a;
+  --primary: #661b49;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+}
+
+#logo {
+  font-family: 'Leckerli One', cursive;
+  color: var(--primary);
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+header a {
+  text-decoration: none;
+  color: var(--black);
+}
+
+/* Pseudo clase */
+/* hover => pasas el mouse por encima */
+/* focus => cuando el elemento está habilitado */
+/* active => cuando mantienes presionado el mouse */
+/* visited => cuando previamente se ha usado el link */
+a:hover {
+  color: var(--primary);
+}
+
+button {
+  background-color: var(--primary);
+  color: var(--white);
+  border: 1px solid transparent;
+  text-transform: uppercase;
+  /* margin-left: 10px; */
+  /* padding: top right bottom left; */
+  /* padding: 5px 10px 8px 6px; */
+  /* padding: top/bottom right/left; */
+  padding: 10px 16px;
+  /* padding: 10px; */
+  /* padding-left: ; */
+  /* padding-right: ; */
+  /* padding-top: ; */
+  /* padding-bottom: ; */
+  font-weight: 600;
+  /* Fuente base 16px */
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--white);
+  color: var(--primary);
+  border: 1px solid var(--primary);
+}
+
+.contenedor {
+  max-width: 1024px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+header .contenedor {
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#navegacion {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+nav > ul {
+  display: flex;
+  gap: 16px;
+}
+
+.contenedor.cajas {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.caja {
+  width: 300px;
+  height: 300px;
+  background-color: #4a4a4a;
+  border: 3px solid var(--primary);
+}
+
+/* Hero */
+#hero {
+  height: 500px;
+  background-image: url("https://cdn.pixabay.com/photo/2014/12/15/14/05/salad-569156_960_720.jpg");
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  color: var(--white);
+  border-radius: 25px;
+  position: relative;
+  overflow: hidden;
+}
+
+#hero a {
+  color: var(--white);
+  text-decoration: none;
+}
+
+.hero-contenido {
+  height: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 50%;
+  padding: 16px;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-contenido h2 {
+  font-size: 50px;
+  font-weight: 600;
+}
+
+.hero-contenido p {
+  font-size: 20px;
+}
+
+.overlay {
+  height: inherit;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  z-index: 0;
+}
+
+/* Sección de Recetas */
+#recetas {
+  padding: 60px 0 40px;
+}
+
+#recetas h2 {
+  font-size: 40px;
+}
+
+#lista-de-recetas {
+  display: flex;
+  justify-content: space-between;
+}
+
+.receta a {
+  text-decoration: none;
+  color: var(--gray);
+}
+
+.receta a:hover {
+  color: var(--primary);
+}
+
+.receta figure {
+  margin: 0;
+  height: 215px;
+  border-radius: 25px;
+  overflow: hidden;
+}
+
+.receta img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Sección del suscríbete */
+#suscribete {
+  background: var(--primary);
+  color: var(--white);
+  height: 300px;
+  border-radius: 25px;
+  margin: 40px 0;
+}
+
+#suscribete .contenedor {
+  max-width: 800px;
+  height: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+#suscribete form {
+  width: 80%;
+  display: flex;
+  gap: 16px
+}
+
+#suscribete h2 {
+  font-size: 30px;
+  margin: 0;
+  text-align: center;
+}
+
+form input:nth-child(1) {
+  width: 75%;
+}
+
+form input:nth-child(2) {
+  width: 25%;
+}
+
+input[type="text"] {
+  color: var(--white);
+  height: 40px;
+  border-radius: 50px;
+  border: 1px solid var(--white);
+  background-color: transparent;
+  padding-left: 16px;
+}
+
+input[type="text"]::placeholder {
+  color: var(--white);
+  font-family: 'Montserrat', sans-serif;
+}
+
+input[type="submit"] {
+  color: var(--black);
+  background-color: var(--white);
+  border-radius: 25px;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: bold;
+  border-color: transparent;
+}
+
+input[type="submit"]:hover {
+  color: var(--primary);
+}
+
+/* Footer */
+footer {
+  background-color: var(--gray);
+  color: var(--white);
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Detalle recetas */
+.detalle-receta {
+  margin: 30px 0;
+}
+
+.fila1, .fila2 {
+  display: flex;
+  gap: 32px;
+}
+
+.fila1 figure {
+  margin: 0;
+  width: 450px;
+  height: 400px;
+}
+
+.fila1 figure img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.receta-info {
+  width: calc(100% - 450px);
+}
+
+.receta-info h2 {
+  font-size: 40px;
+  margin-top: 0;
+}
+
+/* Fila 2 */
+.preparacion {
+  width: 70%;
+}
+
+.ingredientes {
+  width: 30%;
+}
+
+.ingredientes h3, .preparacion h3 {
+  text-transform: uppercase;
+}
+
+.ingredientes ul, .preparacion ol {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.preparacion ol {
+  counter-reset: listCounter; 
+}
+
+.preparacion ol li {
+  counter-increment: listCounter;
+}
+
+.preparacion ol li::before {
+  content: "Paso " counter(listCounter);
+  font-weight: bold;
+}
+
+.ingredientes ul li {
+  padding: 24px 0;
+  border-bottom: 1px solid var(--gray);
+}
+
+.ingredientes ul li:last-child {
+  border: none;
+}
+
+.ingredientes p {
+  margin: 0;
+}
